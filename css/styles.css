@@ -1,0 +1,276 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color:#ffffff;
+}
+
+h1,h2,h3 {
+    font-family: 'Libre Baskerville', serif;
+}
+
+p{
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    background-color: rgb(15, 14, 14);
+}
+
+/* styling the navbar */
+.navbar{
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    overflow: auto;
+}
+
+@media (max-width: 800px) {
+    .navbar .logo h2{
+        font-size: 15px;
+    }
+
+    .navbar .logo p{
+        font-size: 10px;
+    }
+}
+
+.navbar .links{
+    overflow: hidden;
+}
+
+.navbar li{
+    list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;  
+}
+
+@media (max-width: 800px) {
+    .navbar li {
+      flex-direction: column;
+    }
+}
+
+.links li ul a{
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    margin: 5px;
+    padding: 5px;
+    display: block;
+    text-align: center;
+}
+
+.links .icon{
+    display: none;
+    font-size: 20px;
+    padding-right: 20px;
+}
+
+.dropdown {
+  float: right;
+  overflow: hidden;
+}
+
+.dropdown {
+  font-size: 17px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.links .dropdown a {
+  text-decoration: none;
+}
+
+.links li ul a:hover{
+    border-bottom:2px solid #ffd803;
+    transition-delay: 0.2s;
+}
+
+@media screen and (max-width: 600px) {
+    .links li ul a:not(:first-child), .dropdown {
+      display: none;
+    }
+    .links a.icon {
+      float: right;
+      display: block;
+      text-decoration: none;
+    }
+}
+  
+@media screen and (max-width: 600px) {
+    .links.responsive {position: relative;}
+    .links.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .links.responsive li ul a {
+      float: none;
+      /* display: block; */
+      text-align: left;
+    } 
+    .links.responsive .dropdown {float: none;}
+    .links.responsive{position: relative;}
+    .links.responsive .dropdown {
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+}  
+
+.navbar p{
+    color: #ffd803;
+}
+
+.navbar .grid-container{
+    margin-left: 50px;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+} 
+  
+.dropdown:hover .dropdown-content {
+    display: block;
+} 
+
+.topnav.responsive .dropdown {float: none;}
+.topnav.responsive .dropdown-content {position: relative;}
+.topnav.responsive .dropdown {
+      display: block;
+      width: 100%;
+      text-align: left;
+} 
+/* End of navbar styling */
+
+/* Home section Styling */
+#Home{
+    margin: 120px 0;
+    padding: 50px 0;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+/* Responsive layout*/
+@media (max-width: 800px) {
+    #Home {
+      flex-direction: column;
+    }
+}
+
+#Home h1{
+    font-size: 40px;
+}
+
+#Home .Home-text{
+    margin-top: 10%;
+    padding-top: 15%;
+}
+
+#Home .Home-text h2,h3,p{
+    color: #a7a9be;
+    line-height: 2.0rem;
+}
+
+#Home .home-picture img{
+    width:50%;
+    height: 50%;
+}
+
+@media (max-width: 800px){
+    #Home .home-picture img{
+        width: 100%;
+        height: auto;
+        padding-top: 50px;
+    }
+}
+/* End of Styling the Home Section */
+
+/* Styling of the works Section */
+#Works h3{
+    font-size: 25px;
+    font-weight: 600;
+    text-align:center;
+}
+/* End of Styling the works section */
+
+/* Styling of the About Session */
+#About h3{
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.about-text {
+    margin: 70px  80px;
+}
+
+@media (max-width: 800px) {
+    .about-text {
+        margin: 70px  30px;
+    }
+}
+/* End of styling the About Session */
+
+/* Start of Contact Session Styling */
+#Contact h3{
+    text-align: center;
+}
+
+#Contact .button{
+    transition-duration: 0.4s;
+    background-color: #07a228;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    width: 120px;
+    height: 50px;
+    margin: 50px 0;
+}
+.button-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 200px;
+    border: 3px solid green;  */
+  }
+
+#Contact .button a p{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    font-size: 15px;
+}
+
+hr{
+    border: 1px solid #ffd803;
+}
+
+#Contact .button a{
+    text-decoration: none;
+}
+
+#Contact .button:hover{
+    background-color: #ffd803;
+    color: white;
+}
+
+
+
+/* End of styling Contact Session */
